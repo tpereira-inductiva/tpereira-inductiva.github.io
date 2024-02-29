@@ -1,0 +1,25 @@
+# config.yml
+
+publish_mode: editorial_workflow
+
+backend:
+  name: github
+  repo: tiagoafpereira/homepage
+  branch: main
+  # base_url: https://api.netlify.com
+  # auth_endpoint: auth?provider=github&site_id=859e5a90-402b-40d1-b23c-bc97775e2a64&scope=repo
+media_folder: 'assets/uploads'
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    preview_path: 'blog/{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
