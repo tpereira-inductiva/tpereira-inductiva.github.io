@@ -4,7 +4,7 @@ publish_mode: editorial_workflow
 
 backend:
   name: github
-  repo: tiagoafpereira/homepage
+  repo: tpereira-inductiva/website
   branch: main
   # base_url: https://api.netlify.com
   # auth_endpoint: auth?provider=github&site_id=859e5a90-402b-40d1-b23c-bc97775e2a64&scope=repo
